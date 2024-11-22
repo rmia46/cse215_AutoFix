@@ -7,7 +7,7 @@ public class Employee extends People implements PeropleConstants {
 	
 	Employee(String name, String address, int phoneNumber, int nid, String role) {
 		super(name, address, phoneNumber, nid);
-		super.setUsername(generateUsername);
+		super.setUsername(generateUsername());
 		this.role = role;
 	}
 	

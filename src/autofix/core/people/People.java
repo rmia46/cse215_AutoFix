@@ -4,11 +4,12 @@ public abstract class People {
     private String name, username;
     private String address;
     private int phoneNumber, nid;
-
+    
     public People(String name, String address, int phoneNumber, int nid) {
         this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
+        this.nid = nid;
     }
     
     abstract String generateUsername();
@@ -49,6 +50,14 @@ public abstract class People {
 
 	public void setPhoneNumber(int phoneNumber) {
 		this.phoneNumber = phoneNumber;
+	}
+
+	public int getNid() {
+		return nid;
+	}
+
+	public void setNid(int nid) {
+		this.nid = nid;
 	}
     
 }

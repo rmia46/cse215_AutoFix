@@ -4,7 +4,7 @@ public class Customer extends People implements PeropleConstants {
 	private int userId;
 	
 	Customer(String name, String address, int phoneNumber, int nid) {
-		super(name, address, phoneNumber);
+		super(name, address, phoneNumber, nid);
 		userId = generateId();
 		super.setUsername(generateUsername());
 	}
