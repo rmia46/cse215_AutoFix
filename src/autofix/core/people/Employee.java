@@ -45,4 +45,32 @@ public class Employee extends People implements PeropleConstants {
 	public String toString() {
 		return super.toString();
 	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public int getCounter() {
+		return employeeCounter;
+	}
+
+	public int getId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 }

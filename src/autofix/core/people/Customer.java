@@ -30,5 +30,21 @@ public class Customer extends People implements PeropleConstants {
 	public String toString() {
 		return super.toString();
 	}
+
+	public int getCounter() {
+		return customerCounter;
+	}
+
+	public static void setCustomerCounter(int customerCounter) {
+		Customer.customerCounter = customerCounter;
+	}
+
+	public int getId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
 	
 }

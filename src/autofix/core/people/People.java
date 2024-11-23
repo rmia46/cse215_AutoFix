@@ -18,11 +18,13 @@ public abstract class People implements Serializable {
     }
     
     abstract String generateUsername();
+    abstract public int getId();
     abstract int generateId();
+    abstract protected int getCounter();
      
     @Override 
     public String toString() {
-    	return "Name: " + name + "Username: " + username + "\nAddress: " + address + "Phone: " + phoneNumber;
+    	return "Name: " + name + ",Username: " + username + ",Address: " + address + ",Phone: " + phoneNumber;
     }
 
 	public String getName() {
