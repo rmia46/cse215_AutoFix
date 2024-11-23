@@ -17,29 +17,29 @@ public class Validations {
 	    return password != null && password.equals(confirmPassword);
 	}
 	
-	public static boolean isValidAddress(string address) {
+	public static boolean isValidAddress(String address) {
 		if(address == null || address.trim().isEmpty())
 			return false;
 		
 		String validity = "^(?=.*[A-Za-z0-9#-])[A-Za-z0-9#-]{3,}$";
-		return address.matches(validity)
+		return address.matches(validity);
 	}
 	
-	public static boolean isValidNID(String nid) {
-		try {
-            Integer.parseInt(nid);
-            
-        } catch (NumberFormatException e) {
-            throw new InvalidInputException("Input is not a valid NID: " + nid);
-        }
-		
-	}
-	
-	public static boolean isValidPhoneNumber(String phoneNumber) {
-		try {
-            Integer.parseInt(phoneNumber);    
-        } catch (NumberFormatException e) {
-            throw new InvalidInputException("Input is not a valid NID: " + phoneNumber);
-        }
-	}
+//	public static boolean isValidNID(String nid) {
+//		try {
+//            Integer.parseInt(nid);
+//            
+//        } catch (NumberFormatException e) {
+//            throw new InvalidInputException("Input is not a valid NID: " + nid);
+//        }
+//		
+//	}
+//	
+//	public static boolean isValidPhoneNumber(String phoneNumber) {
+//		try {
+//            Integer.parseInt(phoneNumber);    
+//        } catch (NumberFormatException e) {
+//            throw new InvalidInputException("Input is not a valid NID: " + phoneNumber);
+//        }
+//	}
 }

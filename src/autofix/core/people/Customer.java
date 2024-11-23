@@ -1,12 +1,13 @@
 package autofix.core.people;
 
 public class Customer extends People implements PeropleConstants {
+	private static final long serialVersionUID = 1003L;
 	private static int customerCounter = 0;
 	private int usernameExtI = USER_EXTENSION_I;
 	private int usernameExtC = USER_EXTENSION_C;
 	private int customerId;
 	
-	Customer(String name, String address, int phoneNumber, int nid, String password) {
+	public Customer(String name, String address, int phoneNumber, int nid, String password) {
 		super(name, address, phoneNumber, nid, password);
 		customerId = generateId();
 		super.setUsername(generateUsername());
@@ -24,6 +25,10 @@ public class Customer extends People implements PeropleConstants {
 	int generateId() {
 		customerCounter++;
 		return 24300000 + customerCounter;
+	}
+	@Override
+	public String toString() {
+		return super.toString();
 	}
 	
 }

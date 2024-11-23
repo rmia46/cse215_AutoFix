@@ -1,26 +1,25 @@
 package autofix.core.people;
 import autofix.core.exceptions.*;
 import autofix.core.exceptions.PeopleExceptions.*;
+import java.io.Serializable;
 
-public abstract class People {
+public abstract class People implements Serializable {
+	private static final long serialVersionUID = 1001L;
     private String name, username, password;
     private String address;
     private int phoneNumber, nid;
     
-    public People(String name, String address, int phoneNumber, int nid, String password) throws PeopleExceptions {
-    	
+    public People(String name, String address, int phoneNumber, int nid, String password) {
     	this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.nid = nid;
-        
+        this.password = password;
     }
     
     abstract String generateUsername();
     abstract int generateId();
-    
-    
-    
+     
     @Override 
     public String toString() {
     	return "Name: " + name + "Username: " + username + "\nAddress: " + address + "Phone: " + phoneNumber;
