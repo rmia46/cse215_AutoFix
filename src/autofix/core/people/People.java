@@ -1,19 +1,25 @@
 package autofix.core.people;
+import autofix.core.exceptions.*;
+import autofix.core.exceptions.PeopleExceptions.*;
 
 public abstract class People {
-    private String name, username;
+    private String name, username, password;
     private String address;
     private int phoneNumber, nid;
     
-    public People(String name, String address, int phoneNumber, int nid) {
-        this.name = name;
+    public People(String name, String address, int phoneNumber, int nid, String password) throws PeopleExceptions {
+    	
+    	this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.nid = nid;
+        
     }
     
     abstract String generateUsername();
     abstract int generateId();
+    
+    
     
     @Override 
     public String toString() {
