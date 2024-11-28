@@ -1,9 +1,10 @@
 package autofix.core.people;
+import autofix.Generic;
 import autofix.core.exceptions.*;
 import autofix.core.exceptions.PeopleExceptions.*;
 import java.io.Serializable;
 
-public abstract class People implements Serializable {
+public abstract class People implements Serializable, PeopleConstants, Generic {
 	private static final long serialVersionUID = 1001L;
     private String name, username, password;
     private String address;

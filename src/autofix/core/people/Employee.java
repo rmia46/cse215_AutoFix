@@ -1,6 +1,6 @@
 package autofix.core.people;
 
-public class Employee extends People implements PeropleConstants {
+public class Employee extends People implements PeopleConstants {
 	private static final long serialVersionUID = 1002L;
 	private double salary;
 	private static int employeeCounter = 0;
@@ -73,4 +73,5 @@ public class Employee extends People implements PeropleConstants {
 	public void setRole(String role) {
 		this.role = role;
 	}
+
 }

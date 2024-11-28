@@ -1,6 +1,6 @@
 package autofix.core.people;
 
-public class Customer extends People implements PeropleConstants {
+public class Customer extends People {
 	private static final long serialVersionUID = 1003L;
 	private static int customerCounter = 0;
 	private int usernameExtI = USER_EXTENSION_I;
