@@ -1,19 +1,21 @@
 package autofix.core.people;
 
-public class Employee extends People implements PeopleConstants {
+import autofix.AppConstants;
+import autofix.ObjectIdentifier;
+
+public class Employee extends People implements AppConstants, ObjectIdentifier {
 	private static final long serialVersionUID = 1002L;
-	private double salary;
 	private static int employeeCounter = 0;
 	private int employeeId;
-	private String role;
 	private int usernameExtI = USER_EXTENSION_I;
-	//private int usernameExtC = USER_EXTENSION_C;
 	
-	public Employee(String name, String address, int phoneNumber, int nid, String role, String password) {
+	public Employee() {
+		super();
+	}
+	
+	public Employee(String name, String address, String phoneNumber, int nid, String password) {
 		super(name, address, phoneNumber, nid, password);
 		super.setUsername(generateUsername());
-		this.role = role;
-		this.salary = generateSalary(role);
 	}
 	
 	@Override
@@ -21,37 +23,17 @@ public class Employee extends People implements PeopleConstants {
         String[] nameParts = super.getName().toLowerCase().split(" ");
         String baseUsername = nameParts[0] + "." + nameParts[1];
         usernameExtI = (usernameExtI == 1000) ? (usernameExtI - 999) : ++usernameExtI;
-        //usernameExtC = ((char)usernameExtC == 'Z') ? 65 : ++usernameExtC;
         return baseUsername + "." + usernameExtI;
 	}
 	@Override
-	int generateId() {
+	public int generateId() {
 		employeeCounter++;
 		return 24100000 + employeeCounter;
 	}
 	
-	private double generateSalary(String role) {
-		switch(role) {
-			case CEO:
-				return CEO_Salary;
-			case MECHANIC:
-				return MECHANIC_Salary;
-			case MANAGER:
-				return MANAGER_Salary;
-		}
-		return 0.0;
-	}
 	@Override
 	public String toString() {
 		return super.toString();
-	}
-
-	public double getSalary() {
-		return salary;
-	}
-
-	public void setSalary(double salary) {
-		this.salary = salary;
 	}
 
 	public int getCounter() {
@@ -65,13 +47,4 @@ public class Employee extends People implements PeopleConstants {
 	public void setEmployeeId(int employeeId) {
 		this.employeeId = employeeId;
 	}
-
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
-
 }

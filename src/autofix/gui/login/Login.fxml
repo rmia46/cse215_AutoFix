@@ -1,33 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="centerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" stylesheets="@../stylesheets/application.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autofix.gui.login.LoginController">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <AnchorPane prefHeight="500.0" prefWidth="700.0">
+      <BorderPane prefHeight="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="14.0" prefHeight="78.0" prefWidth="239.0" text="AutoFix Solutions">
+                  <Label id="topHeader" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="520.0" stylesheets="@../stylesheets/application.css" text="Login">
                      <font>
-                        <Font name="Impact" size="32.0" />
+                        <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="255.0" layoutY="73.0" text="Auto repair made simple">
-                     <font>
-                        <Font name="Segoe Script" size="14.0" />
-                     </font>
-                  </Label>
-                  <Button layoutX="453.0" layoutY="337.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="76.0" text="Login" />
-                  <Button layoutX="275.0" layoutY="337.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" text="Signup" />
+                  <VBox alignment="CENTER" prefHeight="466.0" prefWidth="373.0">
+                     <children>
+                        <TextField id="textField" fx:id="loginUserNameField" prefHeight="35.0" promptText="Username or email" stylesheets="@../stylesheets/application.css">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="30.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <PasswordField id="textField" fx:id="loginPasswordField" prefHeight="35.0" promptText="Passowrd">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                     </children>
+                  </VBox>
                </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
+            </VBox>
+         </center>
+         <bottom>
+            <Button id="signupButton" fx:id="loginButton" mnemonicParsing="false" stylesheets="@../stylesheets/application.css" text="Login" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="40.0" />
+               </BorderPane.margin>
+            </Button>
+         </bottom>
+      </BorderPane>
    </children>
-</StackPane>
+</AnchorPane>

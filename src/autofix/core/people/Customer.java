@@ -1,13 +1,20 @@
 package autofix.core.people;
 
-public class Customer extends People {
+import autofix.AppConstants;
+import autofix.ObjectIdentifier;
+
+public class Customer extends People implements AppConstants, ObjectIdentifier {
 	private static final long serialVersionUID = 1003L;
 	private static int customerCounter = 0;
 	private int usernameExtI = USER_EXTENSION_I;
 	private int usernameExtC = USER_EXTENSION_C;
 	private int customerId;
 	
-	public Customer(String name, String address, int phoneNumber, int nid, String password) {
+	public Customer() {
+		super();
+	}
+	
+	public Customer(String name, String address, String phoneNumber, int nid, String password) {
 		super(name, address, phoneNumber, nid, password);
 		customerId = generateId();
 		super.setUsername(generateUsername());
@@ -18,11 +25,11 @@ public class Customer extends People {
         String[] nameParts = super.getName().toLowerCase().split(" ");
         String baseUsername = nameParts[0] + "." + nameParts[1];
         usernameExtI = (usernameExtI == 10000) ? (usernameExtI - 9999) : ++usernameExtI;
-        usernameExtC = ((char)usernameExtC == 'Z') ? 65 : ++usernameExtC;
+        usernameExtC = ((char)usernameExtC == 'z') ? 97 : ++usernameExtC;
         return baseUsername + "." + usernameExtI + (char)usernameExtC;
 	}
 	@Override
-	int generateId() {
+	public int generateId() {
 		customerCounter++;
 		return 24300000 + customerCounter;
 	}

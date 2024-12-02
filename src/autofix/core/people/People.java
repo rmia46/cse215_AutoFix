@@ -1,16 +1,26 @@
 package autofix.core.people;
 import autofix.Generic;
-import autofix.core.exceptions.*;
-import autofix.core.exceptions.PeopleExceptions.*;
 import java.io.Serializable;
 
-public abstract class People implements Serializable, PeopleConstants, Generic {
+public abstract class People implements Serializable, Generic {
 	private static final long serialVersionUID = 1001L;
     private String name, username, password;
-    private String address;
-    private int phoneNumber, nid;
+    public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	private String address, phoneNumber;
+    private int nid;
     
-    public People(String name, String address, int phoneNumber, int nid, String password) {
+    public People() {
+    	
+    }
+    
+    public People(String name, String address, String phoneNumber, int nid, String password) {
     	this.name = name;
         this.address = address;
         this.phoneNumber = phoneNumber;
@@ -20,12 +30,11 @@ public abstract class People implements Serializable, PeopleConstants, Generic {
     
     abstract String generateUsername();
     abstract public int getId();
-    abstract int generateId();
     abstract protected int getCounter();
      
     @Override 
     public String toString() {
-    	return "Name: " + name + ",Username: " + username + ",Address: " + address + ",Phone: " + phoneNumber;
+    	return "Name: " + name + "\nUsername: " + username + "\nAddress: " + address + "\nPhone: " + phoneNumber + " Pass: " + password;
     }
 
 	public String getName() {
@@ -52,11 +61,11 @@ public abstract class People implements Serializable, PeopleConstants, Generic {
 		this.address = address;
 	}
 
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 
@@ -66,6 +75,5 @@ public abstract class People implements Serializable, PeopleConstants, Generic {
 
 	public void setNid(int nid) {
 		this.nid = nid;
-	}
-    
+	} 
 }

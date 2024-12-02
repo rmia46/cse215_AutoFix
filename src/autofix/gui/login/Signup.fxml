@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="centerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" stylesheets="@../stylesheets/application.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="autofix.gui.login.SignupController">
+   <children>
+      <BorderPane id="centerPane" prefHeight="500.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label id="topHeader" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="530.0" stylesheets="@../stylesheets/application.css" text="Sign Up">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER_LEFT" prefHeight="466.0" prefWidth="373.0">
+                     <children>
+                        <TextField id="textField" fx:id="signupName" prefHeight="35.0" promptText="Full Name">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField id="textField" fx:id="signupNID" layoutX="30.0" layoutY="42.0" prefHeight="35.0" promptText="NID">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField id="textField" fx:id="signupAddress" layoutX="30.0" layoutY="170.0" prefHeight="35.0" promptText="Address">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField id="textField" fx:id="signupPhoneNumber" layoutX="10.0" layoutY="188.0" prefHeight="35.0" promptText="Phone Number">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <PasswordField id="textField" fx:id="signupPassword" prefHeight="35.0" promptText="Password">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <PasswordField id="textField" fx:id="signupConfirmPassword" layoutX="10.0" layoutY="348.0" prefHeight="35.0" promptText="Confirm Passowrd">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </VBox.margin>
+                        </PasswordField>
+                        <TextField id="textField" fx:id="identifier" layoutX="30.0" layoutY="217.0" prefHeight="35.0" promptText="Type &quot;C&quot; if you are a customer without quotes.">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <Button id="signupButton" fx:id="signupButton" mnemonicParsing="false" prefHeight="33.0" prefWidth="66.0" text="Signup" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="30.0" />
+               </BorderPane.margin>
+               <stylesheets>
+                  <URL value="@../stylesheets/application.css" />
+               </stylesheets>
+            </Button>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

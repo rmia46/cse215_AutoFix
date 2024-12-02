@@ -1,0 +1,45 @@
+#appMenu {
+	-fx-text-fill: white;
+}
+#appMenu:hover, #appMenu:focus {
+	-fx-background-color : rgba(255, 255, 255, 0.32);
+	-fx-background-radius: 4px;
+}
+#appMenu:active {
+	-fx-background-color : #b0ffc5;
+	-fx-background-radius: 4px;
+}
+#leftPane {
+	-fx-background-color: #4FC3F7;
+}
+#rightPane {
+	-fx-background-color: #E1F5FE;
+}
+#appTitle {
+	-fx-text-fill: white;
+}
+#footerText {
+	-fx-text-fill: white;
+}
+#centerPane {
+	-fx-background-color: #E1F5FE;
+}
+#topHeader {
+	-fx-background-color: #B3E5FC;
+}
+#signupButton {
+	-fx-background-color: #B3E5FC;
+}
+#buttonAll {
+	-fx-background-color: #E1F5FE;
+}
+
+#textField {
+	-fx-background-color: #ffffff;
+	-fx-background-radius: 5px;
+}
+#textField:focused {
+	-fx-border-color: #B3E5FC;
+	-fx-border-radius: 5px;
+	-fx-border-width: 2px;
+}

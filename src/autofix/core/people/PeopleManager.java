@@ -5,9 +5,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import autofix.core.exceptions.PeopleExceptions.*;
+import autofix.AppConstants;
 
-public class PeopleManager implements PeopleConstants{
+public class PeopleManager implements AppConstants {
 	
 	public static boolean exists(People person, List<People> peopleList) {
 		for(People find : peopleList) {
