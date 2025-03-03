@@ -15,12 +15,10 @@
 #rightPane {
 	-fx-background-color: #E1F5FE;
 }
-#appTitle {
+#appTitle, #footerText {
 	-fx-text-fill: white;
 }
-#footerText {
-	-fx-text-fill: white;
-}
+
 #centerPane {
 	-fx-background-color: #E1F5FE;
 }
@@ -33,6 +31,9 @@
 #buttonAll {
 	-fx-background-color: #E1F5FE;
 }
+#deleteButton {
+	-fx-background-color: #E32227;
+}
 
 #textField {
 	-fx-background-color: #ffffff;
@@ -42,4 +43,7 @@
 	-fx-border-color: #B3E5FC;
 	-fx-border-radius: 5px;
 	-fx-border-width: 2px;
+}
+#alert {
+	-fx-background-color: #E1F5FE;
 }

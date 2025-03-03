@@ -102,18 +102,21 @@ public class SignupController implements AppConstants {
     private void showSuccessAlert() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText("Signup successful!\n");
+        alert.getDialogPane().setId("alert");
         alert.showAndWait();
     }
     private void showDetails(People person) {
     	
     	Alert alert = new Alert(Alert.AlertType.INFORMATION);
     	alert.setContentText(person.toString());
+    	alert.getDialogPane().setId("alert");
     	alert.showAndWait();
     }
 
     private void showErrorAlert(String err) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setContentText("Signup failed.\n" + err);
+        alert.getDialogPane().setId("alert");
         alert.showAndWait();
     }
 }

@@ -81,6 +81,7 @@ public class NotificationManager implements AppConstants {
 	}
 	
 	public static List<String> getNotifications(String callerUserName) {
+		filename = callerUserName + NOTIFICATION_EXT;
 		List<String> notifications = new ArrayList<>();
 		try {
 			notifications = FileManager.read(filename);	

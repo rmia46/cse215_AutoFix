@@ -24,7 +24,6 @@
                         <Font size="36.0" />
                      </font>
                      <stylesheets>
-                        <URL value="@../stylesheets/primer-light.css" />
                         <URL value="@../stylesheets/application.css" />
                      </stylesheets>
                   </Label>
@@ -41,7 +40,6 @@
                         <Insets left="20.0" right="20.0" top="20.0" />
                      </VBox.margin>
                      <stylesheets>
-                        <URL value="@../stylesheets/primer-light.css" />
                         <URL value="@../stylesheets/application.css" />
                      </stylesheets></Button>
                   <Label id="footerText" text="All Rights Reserved@AutoFix Soltuions" textFill="WHITE">
@@ -52,7 +50,6 @@
                         <Font size="10.0" />
                      </font>
                      <stylesheets>
-                        <URL value="@../stylesheets/primer-light.css" />
                         <URL value="@../stylesheets/application.css" />
                      </stylesheets>
                   </Label>

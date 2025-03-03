@@ -79,12 +79,14 @@ public class LoginController implements AppConstants {
     private void showSuccessAlert() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText("Login successful!");
+        alert.getDialogPane().setId("alert");
         alert.showAndWait();
     }
 
     private void showErrorAlert() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setContentText("Username or password mismatch. Login failed.");
+        alert.getDialogPane().setId("alert");
         alert.showAndWait();
     }
 }

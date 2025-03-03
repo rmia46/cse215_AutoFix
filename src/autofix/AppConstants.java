@@ -2,7 +2,7 @@ package autofix;
 
 public interface AppConstants {
 	// FILE
-	final String FILE_PATH = "src/autofix/data/";
+	final String FILE_PATH = "autofix.data";
 	final String EMPLOYEE_FILE = "employee.dat";
 	final String CUSTOMER_FILE = "customer.dat";
 	final String SERVICE_FILE = "job_requests.dat";	
